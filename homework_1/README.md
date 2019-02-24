@@ -31,4 +31,4 @@ leader: 9178 Master
 leader: 9534 Jps
 ```
 
-__OBS:__ In order to have an always working environment you have to add the path to `/users/claudio/hadoop-2.7.6/bin/` and to `/users/claudio/hadoop-2.7.6/sbin/ ` in the `$PATH` variable. To permanently do that, update `$PATH` in /etc/environment using `sudo`.
+__OBS:__ In order to have an always working environment you have to add the path to `/users/[username]/hadoop-2.7.6/bin/` and to `/users/[username]/hadoop-2.7.6/sbin/ ` in the `$PATH` variable. To permanently do that, update `$PATH` in /etc/environment using `sudo`.
