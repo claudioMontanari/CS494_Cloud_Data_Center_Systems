@@ -11,7 +11,7 @@ In order to properly set up the HDFS and Spark frameworks for the given network 
 	- Copy the public key into __~/.ssh/authorized_keys__ for each machine in the cluster
 	- On the master add into a file called slaves the hostname of the nodes in the cluster 
 
-- Run __init_script.sh__ with root privileges 
+- Run __init_script.sh__ with root privileges (don't use  sudo you just have to have root permissions on the cluster)
 
 To check that the installation was successful execute on the master node `parallel-ssh -h slaves -P jps` and expect to have a similar output:
 
@@ -30,3 +30,5 @@ leader: 8977 SecondaryNameNode
 leader: 9178 Master
 leader: 9534 Jps
 ```
+
+__OBS:__ In order to have an always working environment you have to add the path to `/users/claudio/hadoop-2.7.6/bin/` and to `/users/claudio/hadoop-2.7.6/sbin/ ` in the `$PATH` variable. To permanently do that, update `$PATH` in /etc/environment using `sudo`.
