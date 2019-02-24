@@ -13,7 +13,7 @@ In order to properly set up the HDFS and Spark frameworks for the given network 
 
 - Run __init_script.sh__ with root privileges (don't use  sudo you just have to have root permissions on the cluster)
 
-To check that the installation was successful execute on the master node `parallel-ssh -h slaves -P jps` and expect to have a similar output:
+To check that the installation was successful execute on the master node `parallel-ssh -h slaves -P jps` and expect to have a similar output: 
 
 ```
 follower-1: 7959 DataNode
