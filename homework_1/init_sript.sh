@@ -21,6 +21,13 @@
 USER="$(whoami)"
 ABS_PATH="$(pwd)"
 
+echo 'Testing the parallel-ssh connection...'
+if [ ! -f ./slaves ]; then
+	echo 'Create a file named slaves with the list of the host-name present in the cluster'
+fi
+
+parallel-ssh -i -h slaves -O StrictHostKeyChecking=no hostname
+
 # Update the system and download java
 
 echo 'Updating the system and downloading java-jdk...'
