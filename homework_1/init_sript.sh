@@ -113,7 +113,7 @@ scp $USER@leader:$ABS_PATH'/'$SLAVES_PATH $USER@follower-3:$ABS_PATH'/'$SLAVES_P
 
 echo 'Installation of HDFS done, now starting namenode and datanode'
 
-export PATH="/users/claudio/hadoop-2.7.6/bin/:/users/claudio/hadoop-2.7.6/sbin/":$PATH
+export PATH="/users/$USER/hadoop-2.7.6/bin/:/users/$USER/hadoop-2.7.6/sbin/":$PATH
 
 hdfs namenode -format
 yes | start-dfs.sh
