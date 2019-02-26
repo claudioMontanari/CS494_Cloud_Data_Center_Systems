@@ -38,11 +38,11 @@ parallel-ssh -h ./slaves -P "yes | sudo apt-get install openjdk-8-jdk"
 
 
 echo 'Downloading hadoop...'
-
-# Download hadoop on all machines and unzip it
-parallel-ssh -h ./slaves -P wget http://apache.mirrors.hoobly.com/hadoop/common/hadoop-2.7.6/hadoop-2.7.6.tar.gz
+if [ ! -f ./hadoop-2.7.6.tar.gz ]; then
+	# Download hadoop on all machines and unzip it
+	parallel-ssh -h ./slaves -P wget http://apache.mirrors.hoobly.com/hadoop/common/hadoop-2.7.6/hadoop-2.7.6.tar.gz
+fi
 parallel-ssh -h ./slaves -P tar zvxf hadoop-2.7.6.tar.gz
-
 
 echo 'Setting up the core-site.xml file...'
 
@@ -128,7 +128,9 @@ yes | start-dfs.sh
 
 echo 'Downloading spark...'
 
-parallel-ssh -h ./slaves -P wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
+if [ ! -f ./spark-2.2.0-bin-hadoop2.7.tgz ]; then
+	parallel-ssh -h ./slaves -P wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
+fi
 parallel-ssh -h ./slaves -P tar zvxf spark-2.2.0-bin-hadoop2.7.tgz
 
 
