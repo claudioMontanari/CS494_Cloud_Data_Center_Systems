@@ -4,5 +4,5 @@
 
 - [__Homework 1:__](homework_1/) Page-Rank implementation on top of Hadoop and Spark in a cluster of 4 machines
 - [__Homework 2:__](homework_2/) Logistic Regression and AlexNet using Tensorflow in distrbuted mode
-- [__Research Project:__] (research_project/) TO BE DETERMINED
-- [__ Paper Reviews:__] (paper_reviews/) 
+- [__Research Project:__](research_project/) TO BE DETERMINED
+- [__ Paper Reviews:__](paper_reviews/) 
